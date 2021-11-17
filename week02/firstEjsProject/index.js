@@ -22,4 +22,11 @@ app.get("/personform", (req, res) =>
   })
 );
 
+app.post("/handlePerson", (req, res) =>
+  res.render("result", {
+    title: "Person data",
+    header: "Person info",
+    person: req.body,
+  })
+);
 app.listen(port, host, () => console.log(`${host}:${port} listening...`));
