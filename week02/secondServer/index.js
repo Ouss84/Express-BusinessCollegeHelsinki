@@ -9,6 +9,6 @@ const port = 3000;
 const host = "localhost";
 
 const server = http.createServer(app);
-app.get("/", (req, res) => res.send("Hello world"));
+app.get("/", (req, res) => res.sendFile("Hello world"));
 
 server.listen(port, host, () => console.log(`Servering ${host}:${port}`));
