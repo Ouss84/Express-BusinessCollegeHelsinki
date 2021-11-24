@@ -38,7 +38,7 @@ The id is unique
 - remove(id)
   - returns REMOVE_OK / NOT_FOUND / NOT_REMOVED
 - getter for status codes
-  - returns an array of status codes.
+  - returns the status codes.
 
 ### Private API
 
