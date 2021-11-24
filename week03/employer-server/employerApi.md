@@ -12,7 +12,7 @@ The id is unique
     "lastname": "Hökki",
     "department": "ict",
     "salary": 4000
-  }
+  },
   {
     "id": 2,
     "firstname": "Matt",
