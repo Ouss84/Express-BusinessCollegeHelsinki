@@ -21,11 +21,24 @@ app.get("/personform", (req, res) =>
     action: "/handlePerson",
   })
 );
-
+app.get("/loginform", (req, res) =>
+  res.render("form", {
+    title: "Login",
+    header: "insert login credentials",
+    action: "/login",
+  })
+);
 app.post("/handlePerson", (req, res) =>
   res.render("result", {
     title: "Person data",
     header: "Person info",
+    person: req.body,
+  })
+);
+app.post("/login", (req, res) =>
+  res.render("result", {
+    title: "Login data",
+    header: "Your data",
     person: req.body,
   })
 );
