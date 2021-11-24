@@ -1,0 +1,13 @@
+"use strict";
+
+const CODES = {
+  PROGRAM_ERROR: 0,
+  NOT_FOUND: 1,
+  INSERT_OK: 2,
+  NOT_INSERTED: 3,
+  ALREADY_IN_USE: 4,
+  REMOVE_OK: 5,
+  NOT_REMOVED: 6,
+  UPDATE_OK: 7,
+  NOT_UPDATED: 8,
+};

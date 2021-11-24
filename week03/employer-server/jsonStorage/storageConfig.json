@@ -1,3 +1,4 @@
 {
-  "storageFile": "employees.json"
+  "storageFile": "employees.json",
+  "adapterFile": "employeeAdaptor.js"
 }

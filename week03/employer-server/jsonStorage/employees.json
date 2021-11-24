@@ -14,8 +14,24 @@
         "salary": 4000
     },
     {
-        "a": 1,
-        "b": 2,
-        "c": 3
+        "id": 3,
+        "firstname": "MattX",
+        "lastname": "RiverX",
+        "department": "ictX",
+        "salary": 6000
+    },
+    {
+        "id": 3,
+        "firstname": "MattX",
+        "lastname": "RiverX",
+        "department": "ictX",
+        "salary": 6000
+    },
+    {
+        "id": 3,
+        "firstname": "MattX",
+        "lastname": "RiverX",
+        "department": "ictX",
+        "salary": 6000
     }
 ]

@@ -2,8 +2,9 @@
 
 const path = require("path");
 
-const { storageFile } = require("./storageConfig.json");
+const { storageFile, adapterFile } = require("./storageConfig.json");
 
+const { adapt } = require(path.join(__dirname, adapterFile));
 const { readStorage, writeStorage } = require("./readerWriter");
 
 const storageFilePath = path.join(__dirname, storageFile);
@@ -19,7 +20,7 @@ async function getOneFromStorage(id) {
 
 async function addToStorage(newObject) {
   const storage = await readStorage(storageFilePath);
-  storage.push(newObject);
+  storage.push(adapt(newObject));
   return await writeStorage(storageFilePath, storage);
 }
 
@@ -27,7 +28,7 @@ async function updateStorage(updatedObject) {
   const storage = await readStorage(storageFilePath);
   const oldObject = storage.find((item) => item.id == updatedObject.id);
   if (oldObject) {
-    Object.assign(oldObject, updatedObject);
+    Object.assign(oldObject, adapt(updatedObject));
     return await writeStorage(storageFilePath, storage);
   } else {
     return false;
