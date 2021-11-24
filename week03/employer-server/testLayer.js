@@ -4,15 +4,17 @@ const {
   getAllFromStorage,
   getOneFromStorage,
   addToStorage,
+  updateStorage,
+  removeFromStorage,
 } = require("./jsonStorage/storageLayer");
 
 // getAllFromStorage().then(console.log).catch(console.log);
 // getOneFromStorage(2).then(console.log).catch(console.log);
-const emp = {
+const empupdate = {
   id: 3,
   firstname: "MattX",
   lastname: "RiverX",
   department: "ictX",
-  salary: 5000,
+  salary: 6000,
 };
-addToStorage(emp).then(console.log).catch(console.log);
+removeFromStorage(3).then(console.log).catch(console.log);
