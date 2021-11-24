@@ -19,6 +19,8 @@ app.get("/personform", (req, res) =>
     title: "Person data",
     header: "Insert data",
     action: "/handlePerson",
+    passType: "text",
+    name: "Last name",
   })
 );
 app.get("/loginform", (req, res) =>
@@ -26,6 +28,8 @@ app.get("/loginform", (req, res) =>
     title: "Login",
     header: "insert login credentials",
     action: "/login",
+    passType: "password",
+    name: "Password",
   })
 );
 app.post("/handlePerson", (req, res) =>
@@ -33,6 +37,7 @@ app.post("/handlePerson", (req, res) =>
     title: "Person data",
     header: "Person info",
     person: req.body,
+    name: "Last name",
   })
 );
 app.post("/login", (req, res) =>
