@@ -12,5 +12,12 @@
         "lastname": "RiverX",
         "department": "ictX",
         "salary": 6000
+    },
+    {
+        "id": 1,
+        "firstname": "MattX",
+        "lastname": "RiverX",
+        "department": "ICTX",
+        "salary": 30000
     }
 ]

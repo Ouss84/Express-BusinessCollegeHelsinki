@@ -18,30 +18,30 @@
               name="id"
               size="5"
               value="<%= id.value %>"
-              <%= "id.readonly" %>
-            />
+              <%= id.readonly %>
+            >
           </p>
           <p>
-            <label for="firstname">Firstname:</label>
+            <label for="firstname">First name:</label>
             <input
               type="text"
               id="firstname"
               name="firstname"
               size="15"
               value="<%= firstname.value %>"
-              <%= "id.firstname" %>
-              />
+              <%= firstname.readonly %>
+              >
           </p>
           <p>
-            <label for="lastname">lastname:</label>
+            <label for="lastname">Last name:</label>
             <input
               type="text"
               id="lastname"
               name="lastname"
               size="30"
               value="<%= lastname.value %>"
-              <%= "id.lastname" %>
-              />
+              <%= lastname.readonly %>
+              >
           </p>
           <p>
             <label for="department">Department:</label>
@@ -51,8 +51,8 @@
               name="department"
               size="30"
               value="<%= department.value %>"
-              <%= "id.department" %>
-              />
+              <%= department.readonly %>
+              >
           </p>
           <p>
             <label for="salary">salary:</label>
@@ -62,8 +62,8 @@
               name="salary"
               size="6"
               value="<%= salary.value %>"
-              <%= "id.salary" %>
-              />
+              <%= salary.readonly %>
+              >
           </p>
         </div>
         <button type="submit">Submit</button>

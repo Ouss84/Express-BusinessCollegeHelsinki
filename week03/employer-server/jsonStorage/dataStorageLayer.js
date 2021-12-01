@@ -51,7 +51,7 @@ module.exports = class Datastorage {
   } //insert end
   update(employee) {
     return new Promise(async (resolve, reject) => {
-      if (employe) {
+      if (employee) {
         if (await updateStorage(employee)) {
           resolve(MESSAGES.UPDATE_OK(employee.id));
         } else {
