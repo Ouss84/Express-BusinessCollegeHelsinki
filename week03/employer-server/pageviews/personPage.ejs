@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Query result</title>
+    <link rel="stylesheet" href="/styles/styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Employee data</h1>
+      <p>Employee Id: <%= result.id %></p>
+      <p>Name: <%= result.firstname %> <%= result.lastname %></p>
+      <p>Department is <%= result.department %></p>
+      <p>Salary <%= result.salary %> €</p>
+      <a href="/"><button>Menu</button></a>
+    </main>
+  </body>
+</html>

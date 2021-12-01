@@ -33,4 +33,26 @@ app.get("/all", (req, res) =>
     .getAll()
     .then((data) => res.render("allPersons", { result: data }))
 );
+
+app.get("/getPerson", (req, res) =>
+  res.render("getPerson", { title: "Get", header: "Get", action: "/getPerson" })
+);
+
+app.post("/getPerson", (req, res) => {
+  if (!req.body) res.sendStatus(500);
+  const employeeId = req.body.id;
+  dataStorage
+    .getOne(employeeId)
+    .then((employee) => res.render("personPage", { result: employee }))
+    .catch((error) => sendErrorPage(res, error));
+});
+
 server.listen(port, host, () => console.log(`${host}:${port} serving...`));
+
+function sendErrorPage(res, error, title = "Error", header = "Error") {
+  sendStatusPage(res, error, title, header);
+}
+
+function sendStatusPage(res, status, title = "status", header = "status") {
+  return res.render("statusPage", { title, header, status });
+}
