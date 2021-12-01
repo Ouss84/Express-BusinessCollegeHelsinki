@@ -28,4 +28,9 @@ const menuPath = path.join(__dirname, "menu.html");
 
 app.get("/", (req, res) => res.sendFile(menuPath));
 
+app.get("/all", (req, res) =>
+  dataStorage
+    .getAll()
+    .then((data) => res.render("allPersons", { result: data }))
+);
 server.listen(port, host, () => console.log(`${host}:${port} serving...`));
