@@ -47,6 +47,22 @@ app.post("/getPerson", (req, res) => {
     .catch((error) => sendErrorPage(res, error));
 });
 
+app.get("/removeperson", (req, res) =>
+  res.render("getPerson", {
+    title: "Remove",
+    header: "Remove a person",
+    action: "/removeperson",
+  })
+);
+
+app.post("/removeperson", (req, res) => {
+  if (!req.body) res.sendStatus(500);
+  const employeeId = req.body.id;
+  dataStorage
+    .remove(employeeId)
+    .then((status) => sendStatusPage(res, status))
+    .catch((error) => sendStatusPage(res, error));
+});
 server.listen(port, host, () => console.log(`${host}:${port} serving...`));
 
 function sendErrorPage(res, error, title = "Error", header = "Error") {
